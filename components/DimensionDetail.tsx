@@ -79,20 +79,6 @@ export default function DimensionDetail({ dimension, onClose }: DimensionDetailP
                 {dimension.content.keyPoints.map((point, index) => (
                   <motion.li
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start gap-3"
-                  >
-                    <CheckCircle
-                      className={`w-6 h-6 ${dimension.color} text-white rounded-full flex-shrink-0 mt-0.5`}
-                    />
-                    <span className="text-wellness-canopy/80 leading-relaxed">
-                      {point}
-                    </span>
-                  </motion.li>
-                ))}
-              </ul>
             </div>
 
             <div>
