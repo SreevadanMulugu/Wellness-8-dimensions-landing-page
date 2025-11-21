@@ -103,7 +103,7 @@ export default function Resources() {
             className="opacity-30"
           />
         </motion.div>
-        
+
         <motion.div
           animate={{ rotate: [0, 360], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
@@ -187,19 +187,19 @@ export default function Resources() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: categoryIndex * 0.1 }}
-              className="rounded-3xl p-6 bg-white border border-wellness-canopy/10 shadow-[0_20px_60px_rgba(31,91,76,0.12)]"
+                className="rounded-3xl p-6 bg-white border border-wellness-canopy/10 shadow-[0_20px_60px_rgba(31,91,76,0.12)]"
               >
                 <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center`}
-                  style={{
-                    background: categoryIndex === 0 ? 'linear-gradient(135deg, #ffe6a7, #fff4d4)' : 
-                                categoryIndex === 1 ? 'linear-gradient(135deg, #c9fdd7, #e8fcef)' : 
-                                'linear-gradient(135deg, #d9e7ff, #f0f4ff)'
-                  }}
-                >
-                  <Icon className="w-6 h-6 text-wellness-canopy" />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center`}
+                    style={{
+                      background: categoryIndex === 0 ? 'linear-gradient(135deg, #ffe6a7, #fff4d4)' :
+                        categoryIndex === 1 ? 'linear-gradient(135deg, #c9fdd7, #e8fcef)' :
+                          'linear-gradient(135deg, #d9e7ff, #f0f4ff)'
+                    }}
+                  >
+                    <Icon className="w-6 h-6 text-wellness-canopy" />
                   </div>
-                <h3 className="text-2xl font-display text-wellness-canopy">
+                  <h3 className="text-2xl font-display text-wellness-canopy">
                     {category.category}
                   </h3>
                 </div>
@@ -232,9 +232,9 @@ export default function Resources() {
                             <p className="text-sm text-wellness-canopy/70 mb-2">
                               {item.description}
                             </p>
-                            {item.duration && (
+                            {(item as any).duration && (
                               <span className="text-xs text-wellness-fern font-medium">
-                                {item.duration}
+                                {(item as any).duration}
                               </span>
                             )}
                           </div>
