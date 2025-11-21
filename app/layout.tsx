@@ -18,9 +18,29 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: '8 Dimensions of Wellness | Your Journey to Holistic Well-Being',
-  description: 'Explore the 8 dimensions of wellness through an interactive and engaging experience. Learn about physical, emotional, intellectual, social, spiritual, environmental, occupational, and financial wellness.',
-  keywords: 'wellness, health, holistic wellness, 8 dimensions, well-being, self-care',
+  title: 'Ridhira Wellness | 8 Dimensions of Holistic Well-Being',
+  description: 'Experience the gold standard in wellness assessment. Explore the 8 dimensions of wellness through an interactive, beautifully designed journey crafted for Ridhira Group.',
+  keywords: 'wellness, health, holistic wellness, 8 dimensions, well-being, self-care, Ridhira, wellness assessment',
+  authors: [{ name: 'Ridhira Group' }],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: 'cover',
+  },
+  themeColor: '#C9A961',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Ridhira Wellness',
+  },
+  openGraph: {
+    title: 'Ridhira Wellness | 8 Dimensions',
+    description: 'Your journey to holistic well-being',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
