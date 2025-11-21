@@ -4,26 +4,36 @@
 
 /* Ridhira Gold Theme - Buttery Smooth Global Styles */
 
-'Segoe UI',
-sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-text-rendering: optimizeLegibility;
-transition: background-color 0.3s ease,
-color 0.3s ease;
-position: relative;
-min-height: 100vh;
-/* Ridhira Warm Cream & Gold Gradient Background */
-background-image: linear-gradient(135deg, #FFFEF9 0%, #FAF6ED 50%, #F4E4C1 100%);
-background-attachment: fixed;
-/* GPU Acceleration */
-transform: translateZ(0);
-will-change: transform;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-/* Smooth Scrolling with Momentum (iOS-style) */
 html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  /* Remove tap highlight on mobile */
   -webkit-overflow-scrolling: touch;
+  /* iOS momentum scrolling */
+}
+
+body {
+  color: #2d2416;
+  background: #FFFEF9;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  min-height: 100vh;
+  /* Ridhira Warm Cream & Gold Gradient Background */
+  background-image: linear-gradient(135deg, #FFFEF9 0%, #FAF6ED 50%, #F4E4C1 100%);
+  background-attachment: fixed;
+  /* GPU Acceleration */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* Remove 300ms tap delay on mobile */
@@ -70,8 +80,7 @@ textarea {
     background: linear-gradient(145deg, rgba(255, 254, 249, 0.95), rgba(255, 248, 231, 0.9));
     border-radius: 24px;
     border: 1px solid rgba(201, 169, 97, 0.2);
-    box-shadow: 0 20px 60px rgba(26, 26, 26, 0.1),
-      0 0 0 1px rgba(201, 169, 97, 0.1) inset;
+    box-shadow: 0 20px 60px rgba(26, 26, 26, 0.1), 0 0 0 1px rgba(201, 169, 97, 0.1) inset;
   }
 
   /* GPU Accelerated Animations */
@@ -177,9 +186,6 @@ textarea {
 
 .skeleton {
   animation: shimmer 2s infinite linear;
-  background: linear-gradient(90deg,
-      rgba(244, 228, 193, 0.2) 0%,
-      rgba(212, 175, 55, 0.3) 50%,
-      rgba(244, 228, 193, 0.2) 100%);
+  background: linear-gradient(90deg, rgba(244, 228, 193, 0.2) 0%, rgba(212, 175, 55, 0.3) 50%, rgba(244, 228, 193, 0.2) 100%);
   background-size: 1000px 100%;
 }
