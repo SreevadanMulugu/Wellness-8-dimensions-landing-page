@@ -168,7 +168,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
 
             {/* Subtle Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-              backgroundImage: 'linear-gradient(rgba(31,91,76,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(31,91,76,0.1) 1px, transparent 1px)',
+              backgroundImage: 'linear-gradient(rgba(201,169,97,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,97,0.1) 1px, transparent 1px)',
               backgroundSize: '40px 40px',
             }} />
 
@@ -273,38 +273,85 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
 
                   {/* CTA Buttons - Enhanced */}
                   <motion.div
-                    {/* Right Visual - Enhanced */}
-              <motion.div
-                    initial={{ opacity: 0, x: 50, scale: 0.9 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    transition={{ delay: 0.4, duration: 0.8, type: 'spring' }}
-                    className="hidden lg:block relative"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.9, duration: 0.8 }}
+                    className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-1"
                   >
-                    <div className="relative">
-                      {/* Enhanced Glow Behind Card */}
+                    <motion.button
+                      whileHover={{ scale: 1.03, y: -1 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={onStartQuiz}
+                      className="px-8 py-3 bg-gradient-to-r from-wellness-fern to-wellness-sun text-white rounded-full font-semibold text-base md:text-lg shadow-[0_20px_60px_rgba(201,169,97,0.25)] hover:shadow-[0_25px_70px_rgba(201,169,97,0.35)] transition-all relative overflow-hidden group"
+                    >
+                      <span className="relative z-10 flex items-center gap-2">
+                        Begin the Journey
+                        <motion.div
+                          animate={{ x: [0, 4, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        >
+                          <Flame className="w-4 h-4 md:w-5 md:h-5 text-amber-100" />
+                        </motion.div>
+                      </span>
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-br from-amber-300/30 via-yellow-200/25 to-wellness-fern/20 blur-3xl rounded-[52px]"
-                        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
-                        transition={{ duration: 8, repeat: Infinity }}
+                        className="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-300 to-wellness-sun opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        initial={false}
                       />
-                      <div className="relative">
-                        <WellnessSpiralPreview />
-                      </div>
-                    </div>
+                    </motion.button>
+                    <motion.a
+                      href="#compass"
+                      whileHover={{ scale: 1.03, y: -1 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="px-8 py-3 bg-white/90 backdrop-blur-sm border border-wellness-fern/20 text-wellness-moss rounded-full font-semibold text-base md:text-lg shadow-[0_20px_60px_rgba(201,169,97,0.12)] hover:shadow-[0_25px_70px_rgba(201,169,97,0.20)] hover:bg-white transition-all"
+                    >
+                      Explore the Compass
+                    </motion.a>
                   </motion.div>
+                </motion.div>
+
+                {/* Right Visual - Enhanced */}
+                <motion.div
+                  initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ delay: 0.4, duration: 0.8, type: 'spring' }}
+                  className="hidden lg:block relative"
+                >
+                  <div className="relative">
+                    {/* Enhanced Glow Behind Card */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-amber-300/30 via-yellow-200/25 to-wellness-fern/20 blur-3xl rounded-[52px]"
+                      animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+                      transition={{ duration: 8, repeat: Infinity }}
+                    />
+                    <div className="relative">
+                      <WellnessSpiralPreview />
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
         </div>
-      </div >
+      </div>
 
       {/* Scroll Indicator - Enhanced - Fixed at bottom */}
-      < motion.div
-        initial={{ opacity: 0 }
-        }
+      <motion.div
+        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }}
         className="pb-2 md:pb-4 text-center relative z-10 flex-shrink-0"
       >
         <motion.a
-
+          href="#compass"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          className="inline-block"
+        >
+          <div className="bg-white/90 backdrop-blur-sm border border-wellness-fern/20 rounded-full p-3 shadow-[0_20px_60px_rgba(201,169,97,0.12)] hover:shadow-[0_25px_70px_rgba(201,169,97,0.20)] transition-all">
+            <ArrowDown className="w-6 h-6 md:w-7 md:h-7 text-wellness-fern" />
+          </div>
+        </motion.a>
+      </motion.div>
+    </section>
+  )
+}
