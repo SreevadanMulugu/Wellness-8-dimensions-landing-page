@@ -31,10 +31,11 @@ export const metadata: Metadata = {
   },
   themeColor: '#C9A961',
   manifest: '/manifest.json',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'black-translucent',
-    title: 'Ridhira Wellness',
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'apple-mobile-web-app-title': 'Ridhira Wellness',
   },
   openGraph: {
     title: 'Ridhira Wellness | 8 Dimensions',
