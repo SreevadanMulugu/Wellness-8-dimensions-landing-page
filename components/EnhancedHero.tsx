@@ -14,7 +14,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
   return (
     <section
       id="home"
-      className="relative h-screen flex flex-col overflow-hidden pt-16 pb-4 bg-gradient-to-b from-[#fefbf5] via-[#f4fbf8] to-[#e6f6ff]"
+      className="relative h-screen flex flex-col overflow-hidden pt-16 pb-4 bg-gradient-to-b from-[#FFFEF9] via-[#FAF6ED] to-[#F4E4C1]"
     >
       {/* Enhanced Doodles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -65,13 +65,13 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
       {/* Enhanced Ambient layers */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute -top-32 -left-16 w-[32rem] h-[32rem] rounded-full bg-gradient-to-br from-green-300/30 to-emerald-600/40 blur-[120px]"
-          animate={{ scale: [1, 1.15, 1], opacity: [0.6, 0.85, 0.6], x: [0, 20, 0] }}
+          className="absolute -top-32 -left-16 w-[32rem] h-[32rem] rounded-full bg-gradient-to-br from-amber-200/20 to-yellow-300/25 blur-[120px]"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4], x: [0, 20, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute top-10 right-10 w-[26rem] h-[26rem] rounded-full bg-gradient-to-br from-lime-200/30 to-teal-500/30 blur-[100px]"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.95, 0.4], y: [0, -15, 0] }}
+          className="absolute top-10 right-10 w-[26rem] h-[26rem] rounded-full bg-gradient-to-br from-yellow-100/25 to-amber-300/20 blur-[100px]"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3], y: [0, -15, 0] }}
           transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
@@ -148,7 +148,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
               style={positions[i]}
               className="absolute"
             >
-              <Icon className={`w-6 h-6 ${i % 3 === 0 ? 'text-wellness-fern/35' : i % 3 === 1 ? 'text-wellness-sun/40' : 'text-wellness-dew/30'}`} />
+              <Icon className={`w-6 h-6 ${i % 3 === 0 ? 'text-wellness-fern/30' : i % 3 === 1 ? 'text-wellness-sun/35' : 'text-amber-300/25'}`} />
             </motion.div>
           )
         })}
@@ -161,11 +161,11 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full rounded-[48px] border border-white/50 bg-white/60 backdrop-blur-3xl shadow-[0_50px_140px_rgba(31,91,76,0.28)] p-6 md:p-10 lg:p-12 overflow-hidden"
+            className="relative w-full rounded-[48px] border border-wellness-fern/20 bg-white/70 backdrop-blur-3xl shadow-[0_50px_140px_rgba(201,169,97,0.18)] p-6 md:p-10 lg:p-12 overflow-hidden"
           >
             {/* Inner Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-wellness-mist/20 rounded-[52px] pointer-events-none" />
-            
+
             {/* Subtle Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
               backgroundImage: 'linear-gradient(rgba(31,91,76,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(31,91,76,0.1) 1px, transparent 1px)',
@@ -188,20 +188,20 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
                     transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
                     className="inline-block"
                   >
-                    <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/90 to-wellness-mist/40 backdrop-blur-md text-wellness-canopy border border-wellness-canopy/15 shadow-[0_20px_60px_rgba(31,91,76,0.15)]">
+                    <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-wellness-cream/90 to-wellness-sage/40 backdrop-blur-md text-wellness-moss border border-wellness-fern/15 shadow-[0_20px_60px_rgba(201,169,97,0.15)]">
                       <motion.div
-                        animate={{ 
+                        animate={{
                           rotate: [0, 360],
                           scale: [1, 1.1, 1]
                         }}
-                        transition={{ 
+                        transition={{
                           rotate: { duration: 8, repeat: Infinity, ease: 'linear' },
                           scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
                         }}
                       >
                         <Sparkles className="w-5 h-5 text-wellness-sun" />
                       </motion.div>
-                      <motion.span 
+                      <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
@@ -218,7 +218,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.4, duration: 0.5 }}
-                      className="text-2xl md:text-3xl lg:text-4xl font-display tracking-tight text-wellness-canopy leading-snug"
+                      className="text-2xl md:text-3xl lg:text-4xl font-display tracking-tight text-wellness-moss leading-snug"
                     >
                       <motion.span
                         animate={{
@@ -232,7 +232,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
                         }}
                         className="inline-block text-wellness-sun"
                       >
-                        <TypewriterText 
+                        <TypewriterText
                           text="Breathe In."
                           speed={120}
                           className="inline-block"
@@ -247,7 +247,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6, duration: 0.8 }}
-                      className="text-2xl md:text-3xl lg:text-4xl font-semibold text-wellness-canopy leading-snug"
+                      className="text-2xl md:text-3xl lg:text-4xl font-semibold text-wellness-moss leading-snug"
                     >
                       Journey Through the{' '}
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-wellness-fern via-wellness-moss to-wellness-sage">
@@ -264,7 +264,7 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8, duration: 0.8 }}
-                    className="text-sm md:text-base text-wellness-canopy/75 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+                    className="text-sm md:text-base text-wellness-moss/80 max-w-xl mx-auto lg:mx-0 leading-relaxed"
                   >
                     Step into an immersive learning sanctuary inspired by ancient forests
                     and modern mindfulness. Each realm reveals practices, sounds, and
@@ -273,86 +273,38 @@ export default function EnhancedHero({ onStartQuiz }: EnhancedHeroProps) {
 
                   {/* CTA Buttons - Enhanced */}
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.9, duration: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-1"
+                    {/* Right Visual - Enhanced */}
+              <motion.div
+                    initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.8, type: 'spring' }}
+                    className="hidden lg:block relative"
                   >
-                    <motion.button
-                      whileHover={{ scale: 1.03, y: -1 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={onStartQuiz}
-                      className="px-8 py-3 bg-gradient-to-r from-wellness-fern to-wellness-moss text-white rounded-full font-semibold text-base md:text-lg shadow-[0_20px_60px_rgba(31,91,76,0.25)] hover:shadow-[0_25px_70px_rgba(31,91,76,0.35)] transition-all relative overflow-hidden group"
-                    >
-                      <span className="relative z-10 flex items-center gap-2">
-                        Begin the Journey
-                        <motion.div
-                          animate={{ x: [0, 4, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity }}
-                        >
-                          <Flame className="w-4 h-4 md:w-5 md:h-5 text-amber-200" />
-                        </motion.div>
-                      </span>
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-lime-400 to-amber-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        initial={false}
-                      />
-                    </motion.button>
-                    <motion.a
-                      href="#compass"
-                      whileHover={{ scale: 1.03, y: -1 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="px-8 py-3 bg-white/90 backdrop-blur-sm border border-wellness-canopy/15 text-wellness-canopy rounded-full font-semibold text-base md:text-lg shadow-[0_20px_60px_rgba(31,91,76,0.15)] hover:shadow-[0_25px_70px_rgba(31,91,76,0.25)] hover:bg-white transition-all"
-                    >
-                      Explore the Compass
-                    </motion.a>
-                  </motion.div>
-                </motion.div>
-
-                {/* Right Visual - Enhanced */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50, scale: 0.9 }}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  transition={{ delay: 0.4, duration: 0.8, type: 'spring' }}
-                  className="hidden lg:block relative"
-                >
-                  <div className="relative">
-                    {/* Enhanced Glow Behind Card */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-emerald-400/40 via-lime-300/30 to-amber-200/20 blur-3xl rounded-[52px]"
-                      animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
-                      transition={{ duration: 8, repeat: Infinity }}
-                    />
                     <div className="relative">
-                      <WellnessSpiralPreview />
+                      {/* Enhanced Glow Behind Card */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-amber-300/30 via-yellow-200/25 to-wellness-fern/20 blur-3xl rounded-[52px]"
+                        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+                        transition={{ duration: 8, repeat: Infinity }}
+                      />
+                      <div className="relative">
+                        <WellnessSpiralPreview />
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
               </div>
             </div>
           </motion.div>
         </div>
-      </div>
+      </div >
 
       {/* Scroll Indicator - Enhanced - Fixed at bottom */}
-      <motion.div
-        initial={{ opacity: 0 }}
+      < motion.div
+        initial={{ opacity: 0 }
+        }
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }}
         className="pb-2 md:pb-4 text-center relative z-10 flex-shrink-0"
       >
         <motion.a
-          href="#compass"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="inline-block"
-        >
-          <div className="bg-white/90 backdrop-blur-sm border border-wellness-canopy/15 rounded-full p-3 shadow-[0_20px_60px_rgba(31,91,76,0.15)] hover:shadow-[0_25px_70px_rgba(31,91,76,0.25)] transition-all">
-            <ArrowDown className="w-6 h-6 md:w-7 md:h-7 text-wellness-fern" />
-          </div>
-        </motion.a>
-      </motion.div>
-    </section>
-  )
-}
 
