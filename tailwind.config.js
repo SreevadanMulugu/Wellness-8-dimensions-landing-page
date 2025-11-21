@@ -11,14 +11,27 @@ module.exports = {
     extend: {
       colors: {
         wellness: {
-          canopy: '#0f2d2c',
-          moss: '#1f5b4c',
-          fern: '#3c8a6b',
-          sage: '#bfe6c9',
-          dew: '#cfe7e3',
-          sun: '#ffd6a5',
-          twilight: '#0b1726',
-          mist: '#f4fbf8',
+          // Ridhira Gold Theme - Luxurious & Premium
+          canopy: '#1a1a1a',      // Deep black for text
+          moss: '#2d2d2d',        // Dark charcoal
+          fern: '#C9A961',        // Rich gold (primary)
+          sage: '#F4E4C1',        // Light cream gold
+          dew: '#FFF8E7',         // Soft ivory
+          sun: '#D4AF37',         // Bright gold accent
+          twilight: '#0f0f0f',    // Pure black
+          mist: '#FFFEF9',        // Off-white background
+          gold: {
+            50: '#FFFEF9',
+            100: '#FFF8E7',
+            200: '#F4E4C1',
+            300: '#E8D199',
+            400: '#D4AF37',
+            500: '#C9A961',
+            600: '#B8963D',
+            700: '#9A7B2F',
+            800: '#7A6124',
+            900: '#5C4919',
+          },
         },
       },
       fontFamily: {
@@ -27,11 +40,13 @@ module.exports = {
       },
       backgroundImage: {
         'forest-gradient':
-          'linear-gradient(135deg, rgba(6,24,24,1) 0%, rgba(21,66,63,1) 35%, rgba(56,128,102,1) 70%, rgba(255,214,165,0.6) 100%)',
+          'linear-gradient(135deg, rgba(26,26,26,1) 0%, rgba(45,45,45,1) 35%, rgba(201,169,97,1) 70%, rgba(244,228,193,0.6) 100%)',
         'twilight-gradient':
-          'linear-gradient(160deg, rgba(5,11,20,1) 0%, rgba(18,46,51,1) 50%, rgba(32,74,66,1) 100%)',
+          'linear-gradient(160deg, rgba(15,15,15,1) 0%, rgba(45,45,45,1) 50%, rgba(201,169,97,1) 100%)',
         'paper-texture':
           'radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 45%), radial-gradient(circle at bottom, rgba(255,255,255,0.1), transparent 40%)',
+        'gold-shimmer':
+          'linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
