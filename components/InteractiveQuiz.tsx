@@ -115,6 +115,8 @@ export default function InteractiveQuiz({ onClose }: InteractiveQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
 
+  console.log('InteractiveQuiz component rendered!')
+
   const handleAnswer = (score: number) => {
     const newAnswers = [...answers, score]
     setAnswers(newAnswers)
@@ -141,7 +143,7 @@ export default function InteractiveQuiz({ onClose }: InteractiveQuizProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
       onClick={onClose}
     >
       <motion.div
